@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>YTU IEEE</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <!-- Internal CSS -->
+    <style>
+        h1 {
+            color: yellow !important;
+        }
+        
+        .baslik {
+            /*basligin cssidir*/
+            background-color: wheat;
+        }
+        
+        #paragrafim {
+            color: teal;
+        }
+    </style>
+</head>
+
+<body onload="alert('yuklendi')">
+    <!-- https://www.w3schools.com/js/pic_bulbon.gif -->
+
+    <!-- Inline CSS -->
+    <h1 style="color:red;" class="">Işık Örneği</h1>
+    <h1>Başka bir H1</h1>
+
+    <p id="external-css">External CSS</p>
+
+    <p id="paragrafim">Bu bir paragraftır.</p>
+    <button onclick="document.getElementById('paragrafim').style.color = 'red'">
+        Rengi Değiştir
+    </button>
+    <br>
+
+    <img id="isik" src="https://www.w3schools.com/js/pic_bulboff.gif" alt="isik_resmi">
+    <br>
+    <button onclick="document.getElementById('isik').style.display = 'inline'">Ampulu Göster</button>
+    <button onclick="document.getElementById('isik').style.display = 'none'">Ampulu Gizle</button>
+    <br>
+    <button onclick="document.getElementById('isik').src = 'https://www.w3schools.com/js/pic_bulbon.gif'">
+        Işığı Aç
+    </button>
+
+    <button onclick="document.getElementById('isik').src = 'https://www.w3schools.com/js/pic_bulboff.gif'">
+        Işığı Kapat
+    </button>
+
+    <button id="mesaj-ver" onclick="tiklandigiZaman()">
+        Mesaj Ver
+    </button>
+
+    <p id="test"></p>
+
+    <!-- <script>
+        //variable
+
+        // console.log("o"); // otomatik çalışma
+
+        let x;
+        const y;
+
+        var isikElementi = document.getElementById('isik');
+    </script> -->
+    <!-- <script src="assets/js/script.js"></script> -->
+    <hr>
+    <input onkeydown="tusBasildi()" type="text">
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
+
+<!-- p -->
+<!-- <> -->
+<!-- <input type="text"> -->
