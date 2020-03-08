@@ -1,0 +1,62 @@
+<!DOCTYPE html> <!-- Döküman tipi html-->
+<html>
+<head>
+<title>Rastgele Sayı Üretme</title>
+</head>
+<body>
+<p>Sayı tahmin edin:</p>
+<input type="text" id="sayiGir"/>
+<button id="tamamButonu">Tamam</button>
+<p id="durumYazisi"></p>
+
+<!-- js ile görünmez yapma --> 
+
+<!-- 
+<button id="tamamButonu" onclick="alert('tamam butonuna tıklandı')">Tamam</button>
+-->
+
+<script>
+var rastgeleSayi = Math.floor(Math.random() * 100 + 1);
+console.log(rastgeleSayi);
+
+// get Element By ID
+var sayiGir = document.getElementById("sayiGir");
+
+var tamamButonu = document.getElementById("tamamButonu");
+
+var durumYazisi = document.getElementById("durumYazisi");
+
+
+sayiGir.onkeydown = function(element){
+	if(element.keyCode == 13){
+		sayiKontrol();
+	}
+}
+
+tamamButonu.onclick = function(){
+	sayiKontrol();
+}
+
+function sayiKontrol(){
+		sayiGir = document.getElementById("sayiGir").value;
+		
+		if(sayiGir < rastgeleSayi){
+			//alert('yukarı çık');
+			durumYazisi.innerHTML = "yukarı";
+		}
+		else if(sayiGir > rastgeleSayi){
+			//alert('aşağı in');
+			durumYazisi.innerHTML = "aşağı";
+		}
+		else{
+			//alert('doğru cevap');
+			durumYazisi.innerHTML = "doğru";
+		}
+	
+}
+
+
+
+</script>
+</body>
+</html>
